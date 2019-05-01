@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="org.richcode.hardselect.MainActivity"></activity>
+        <activity
+            android:name="org.richcode.hardselect.MainActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
         <activity
             android:name="org.richcode.hardselect.SplashActivity"
             android:screenOrientation="portrait"
