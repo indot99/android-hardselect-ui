@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edit_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/black_storke"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/nanum_barunpen_r"
+        android:hint="질문할 내용을 작성하세요"
+        android:layout_above="@+id/edit_layout"
+        />
+        <LinearLayout
+            android:id="@+id/edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_barunpen_r"
+                    android:textAlignment="center"
+                    android:text="싫어요"
+                    android:textColor="#000000"
+                    android:background="@drawable/black_storke"
+                    android:padding="15dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_barunpen_r"
+                    android:textAlignment="center"
+                    android:text="좋아요"
+                    android:textColor="#000000"
+                    android:background="@drawable/black_storke"
+                    android:padding="15dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="작성하기"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/login_title_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:text="ILLUSTATOR\nBOOK"
+        android:textAlignment="center"
+        android:fontFamily="@font/nanum_barunpen_r"
+        android:textColor="#000000"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_id"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_storke"
+            android:padding="10dp"
+            android:layout_margin="3dp"
+            android:hint="아이디"/>
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_storke"
+            android:padding="10dp"
+            android:layout_margin="3dp"
+            android:inputType="textPassword"
+            android:hint="비밀번호"/>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:text="로그인"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_find_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_storke"
+                android:textColor="#000000"
+                android:text="아이디/비밀번호 찾기"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#212121"
+                android:textColor="#FFFFFF"
+                android:text="회원가입"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/button_guest_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:layout_margin="20dp"
+            android:text="게스트 로그인"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="입력한 아이디와 비밀번호는 다음에 자동 로그인 됩니다"
+            android:fontFamily="@font/nanum_barunpen_r"
+            android:textColor="#000000"/>
+    </LinearLayout>
+</RelativeLayout>

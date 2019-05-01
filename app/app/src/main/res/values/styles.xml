@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#000000</item>
+    </style>
+
+    <style name="TabTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#FFFFFF</item>                                <!-- 배경 -->
+
+        <item name="android:textColorPrimary">#000000</item>       <!-- 탭바 선택된 텍스트 -->
+        <item name="android:textColorSecondary">#BDBDBD</item>     <!-- 탭바 텍스트 -->
+
+        <item name="colorAccent">#000000</item>                    <!-- 하단 움직이는 바 색-->
+    </style>
+
+    <style name="SplashTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+</resources>

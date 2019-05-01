@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:plainpie="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="#F6F6F6"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    android:paddingLeft="10dp"
+    android:paddingEnd="10dp"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="3dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/feed_user_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000">
+
+            <TextView
+                android:id="@+id/feed_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/nanum_barunpen_r"
+                android:textSize="17dp"
+                android:layout_margin="10dp"
+                android:text="사용자"
+                />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/item_participants_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/nanum_barunpen_r"
+                android:layout_below="@id/feed_user_text_layout"
+                android:text="200명이 참여했습니다" />
+
+            <TextView
+                android:id="@+id/feed_textfield"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/nanum_barunpen_r"
+                android:textColor="#000000"
+                android:text="나는 비행기를 타고 싶다"
+                android:layout_margin="10dp"
+                android:layout_below="@id/item_planpie_layout"/>
+
+
+            <LinearLayout
+                android:id="@+id/item_planpie_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/item_participants_text"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/nanum_barunpen_r"
+                        android:text="싫어요"
+                        android:layout_marginBottom="10dp"/>
+
+                    <az.plainpie.PieView
+                        android:id="@+id/feed_left_select_chart"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        plainpie:inner_pie_padding="20"
+                        plainpie:percentage="75"
+                        plainpie:percentage_size="20"
+                        plainpie:inner_text_visibility="true"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/nanum_barunpen_r"
+                        android:text="좋아요"
+                        android:layout_marginBottom="10dp"/>
+
+                    <az.plainpie.PieView
+                        android:id="@+id/feed_right_select_chart"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        plainpie:inner_pie_padding="20"
+                        plainpie:percentage="75"
+                        plainpie:percentage_size="20"
+                        plainpie:inner_text_visibility="true"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_below="@id/feed_textfield">
+
+                <Button
+                    android:id="@+id/feed_true_button"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanum_barunpen_b"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/selector_black_button"
+                    android:text="싫어요"
+                    android:layout_below="@id/feed_textfield"/>
+
+                <Button
+                    android:id="@+id/feed_false_button"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanum_barunpen_b"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/selector_black_button"
+                    android:text="좋아요"
+                    android:layout_below="@id/feed_textfield"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
