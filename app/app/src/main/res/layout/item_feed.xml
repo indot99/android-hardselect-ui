@@ -130,6 +130,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/like_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -167,6 +168,25 @@
                     android:layout_below="@id/feed_textfield"/>
 
             </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/feed_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/like_layout"
+                android:background="#BDBDBD"
+                ></RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/feed_divider"
+                android:background="@drawable/selector_comment_button"
+                android:fontFamily="@font/nanum_barunpen_r"
+                android:text="댓글보기(+100)"
+                android:layout_margin="2dp"
+                style="?android:attr/borderlessButtonStyle"
+                />
 
 
 
