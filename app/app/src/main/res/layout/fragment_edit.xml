@@ -4,55 +4,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edit_question"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/black_storke"
-        android:layout_margin="10dp"
-        android:textAlignment="center"
-        android:fontFamily="@font/nanum_barunpen_r"
-        android:hint="질문할 내용을 작성하세요"
-        android:layout_above="@+id/edit_layout"
-        />
-        <LinearLayout
-            android:id="@+id/edit_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_alignParentBottom="true">
+    <!--<EditText-->
+        <!--android:id="@+id/edit_question"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@drawable/black_storke"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:textAlignment="center"-->
+        <!--android:fontFamily="@font/nanum_barunpen_r"-->
+        <!--android:hint="질문할 내용을 작성하세요"-->
+        <!---->
+        <!--/>-->
+    <!---->
 
-            <LinearLayout
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:fontFamily="@font/nanum_barunpen_r"-->
+        <!--android:background="@drawable/black_storke"-->
+        <!--android:textAlignment="center"-->
+        <!--android:padding="10dp"-->
+        <!--android:textSize="20dp"-->
+        <!--android:text="왼손들기"-->
+        <!--android:textColor="#000000"-->
+        <!--/>-->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/left_edit_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nanum_barunpen_r"
-                    android:textAlignment="center"
-                    android:text="싫어요"
-                    android:textColor="#000000"
-                    android:background="@drawable/black_storke"
-                    android:padding="15dp"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nanum_barunpen_r"
-                    android:textAlignment="center"
-                    android:text="좋아요"
-                    android:textColor="#000000"
-                    android:background="@drawable/black_storke"
-                    android:padding="15dp"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"/>
-
-            </LinearLayout>
-
+                android:layout_weight="1"
+                android:background="@drawable/black_storke"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/nanum_barunpen_r"
+                android:hint="왼손에 질문할 내용을 작성하세요"
+                android:inputType="text|textMultiLine"
+                android:minLines="16"
+                android:scrollbars="vertical"
+                />
+            <EditText
+                android:id="@+id/right_edit_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/black_storke"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/nanum_barunpen_r"
+                android:hint="오른손에 질문할 내용을 작성하세요"
+                android:inputType="text|textMultiLine"
+                android:minLines="16"
+                android:scrollbars="vertical"
+                />
             <Button
                 android:id="@+id/edit_complete_button"
                 android:layout_width="match_parent"
@@ -60,8 +72,8 @@
                 android:layout_margin="10dp"
                 android:background="#000000"
                 android:text="작성하기"
-                android:textColor="#FFFFFF" />
-
+                android:textColor="#FFFFFF"
+                />
         </LinearLayout>
 
 </RelativeLayout>

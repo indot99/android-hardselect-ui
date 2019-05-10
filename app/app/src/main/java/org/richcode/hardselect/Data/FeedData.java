@@ -7,19 +7,21 @@ public class FeedData {
     int feedId;
     int userId;
     int count;
-    int like_count;
-    int unlike_count;
-    String userName;
-    String content;
+    int left_count;
+    int right_count;
+    String user_name;
+    String left_content;
+    String right_content;
 
-    public FeedData(int feedId, int userId, int count, int like_count, int unlike_count, String userName, String content) {
+    public FeedData(int feedId, int userId, int count, int left_count, int right_count, String user_name, String left_content, String right_content) {
         this.feedId = feedId;
         this.userId = userId;
         this.count = count;
-        this.like_count = like_count;
-        this.unlike_count = unlike_count;
-        this.userName = userName;
-        this.content = content;
+        this.left_count = left_count;
+        this.right_count = right_count;
+        this.user_name = user_name;
+        this.left_content = left_content;
+        this.right_content = right_content;
     }
 
     public int getFeedId() {
@@ -46,35 +48,43 @@ public class FeedData {
         this.count = count;
     }
 
-    public int getLike_count() {
-        return like_count;
+    public int getLeft_count() {
+        return left_count;
     }
 
-    public void setLike_count(int like_count) {
-        this.like_count = like_count;
+    public void setLeft_count(int left_count) {
+        this.left_count = left_count;
     }
 
-    public int getUnlike_count() {
-        return unlike_count;
+    public int getRight_count() {
+        return right_count;
     }
 
-    public void setUnlike_count(int unlike_count) {
-        this.unlike_count = unlike_count;
+    public void setRight_count(int right_count) {
+        this.right_count = right_count;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public String getContent() {
-        return content;
+    public String getLeft_content() {
+        return left_content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setLeft_content(String left_content) {
+        this.left_content = left_content;
+    }
+
+    public String getRight_content() {
+        return right_content;
+    }
+
+    public void setRight_content(String right_content) {
+        this.right_content = right_content;
     }
 }

@@ -39,13 +39,13 @@ public class FragmentFeed extends Fragment {
 
         FeedRecyclerView.setAdapter(adapter);
 
-        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다"));
-        list.add(new FeedData(0,0,600,27,573,"유저","100만원을 줍는다"));
-        list.add(new FeedData(0,0,200,157,43,"비행기","비행기를 타고싶다"));
-        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다"));
-        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다"));
-        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다"));
-        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다"));
+        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다","버스를 타고 싶다"));
+        list.add(new FeedData(0,0,600,27,573,"유저","100만원을 줍는다","버스를 타고 싶다"));
+        list.add(new FeedData(0,0,200,157,43,"비행기","비행기를 타고싶다","버스를 타고 싶다"));
+        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다","버스를 타고 싶다"));
+        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다","버스를 타고 싶다"));
+        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다","버스를 타고 싶다"));
+        list.add(new FeedData(0,0,100,57,43,"비행기","비행기를 타고싶다","버스를 타고 싶다"));
 
 
         return view;

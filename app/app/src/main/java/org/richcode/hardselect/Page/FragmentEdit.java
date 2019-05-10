@@ -3,6 +3,7 @@ package org.richcode.hardselect.Page;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,8 @@ import org.richcode.hardselect.R;
 
 public class FragmentEdit extends Fragment {
 
-    EditText EditQuestion;
+    EditText LeftEditQuestion;
+    EditText RightEditQuestion;
     Button CompleteButton;
 
 
@@ -26,9 +28,12 @@ public class FragmentEdit extends Fragment {
         View view = inflater.inflate(R.layout.fragment_edit, container, false);
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
-        EditQuestion = (EditText)view.findViewById(R.id.edit_question);
+        LeftEditQuestion = (EditText)view.findViewById(R.id.left_edit_question);
+        RightEditQuestion = (EditText)view.findViewById(R.id.right_edit_question);
         CompleteButton = (Button)view.findViewById(R.id.edit_complete_button);
 
+        LeftEditQuestion.setMovementMethod(new ScrollingMovementMethod());
+        RightEditQuestion.setMovementMethod(new ScrollingMovementMethod());
 
         CompleteButton.setOnClickListener(new View.OnClickListener() {
             @Override

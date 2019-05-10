@@ -8,10 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.jackandphantom.androidlikebutton.AndroidLikeButton;
 
 import org.richcode.hardselect.Data.FeedData;
 import org.richcode.hardselect.R;
@@ -45,13 +42,14 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull FeedAdapter.ViewHolder holder, int position) {
 
         final int pos = position;
-        float like_count = ((float)list.get(pos).getLike_count()/(float)list.get(pos).getCount())*100;
+        float like_count = ((float)list.get(pos).getLeft_count()/(float)list.get(pos).getCount())*100;
         float unlike_count = 100-like_count;
         float like_count_percent = like_count;
         float unlike_count_percent = 100-like_count_percent;
 
-        holder.UserText.setText(list.get(pos).getUserName());
-        holder.ContentText.setText(list.get(pos).getContent());
+        holder.UserText.setText(list.get(pos).getUser_name());
+        holder.LeftContentText.setText(list.get(pos).getLeft_content());
+        holder.RightContentText.setText(list.get(pos).getRight_content());
         holder.CountText.setText(Integer.toString(list.get(pos).getCount())+"명이 참여했습니다");
         holder.UnLikeChart.setPercentageBackgroundColor(Color.parseColor("#FF9090"));
         holder.LikeChart.setPercentageBackgroundColor(Color.parseColor("#90E4FF"));
@@ -74,7 +72,8 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView UserText;
-        TextView ContentText;
+        TextView LeftContentText;
+        TextView RightContentText;
         TextView CountText;
         PieView LikeChart;
         PieView UnLikeChart;
@@ -85,12 +84,13 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
             super(view);
 
             UserText = (TextView)view.findViewById(R.id.feed_user_text);
-            ContentText = (TextView)view.findViewById(R.id.feed_textfield);
+            LeftContentText = (TextView)view.findViewById(R.id.feed_left_content);
+            RightContentText = (TextView)view.findViewById(R.id.feed_right_content);
             CountText = (TextView)view.findViewById(R.id.item_participants_text);
             LikeChart = (PieView)view.findViewById(R.id.feed_right_select_chart);
             UnLikeChart = (PieView)view.findViewById(R.id.feed_left_select_chart);
-            LikeButton = (Button)view.findViewById(R.id.feed_false_button);
-            UnLikeButton = (Button)view.findViewById(R.id.feed_false_button);
+            LikeButton = (Button)view.findViewById(R.id.feed_right_button);
+            UnLikeButton = (Button)view.findViewById(R.id.feed_right_button);
 
         }
     }

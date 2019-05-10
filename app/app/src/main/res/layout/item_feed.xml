@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:plainpie="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/tools"
-    android:background="#F6F6F6"
+    android:background="#D5D5D5"
     android:paddingBottom="20dp"
     android:paddingTop="20dp"
     android:paddingLeft="10dp"
@@ -49,19 +49,93 @@
                 android:layout_below="@id/feed_user_text_layout"
                 android:text="200명이 참여했습니다" />
 
-            <TextView
-                android:id="@+id/feed_textfield"
+            <LinearLayout
+                android:id="@+id/text_field_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:minHeight="100dp"
-                android:textAlignment="center"
                 android:gravity="center"
-                android:layout_centerInParent="true"
-                android:fontFamily="@font/nanum_barunpen_r"
-                android:textColor="#000000"
-                android:text="나는 비행기를 타고 싶다"
-                android:layout_margin="10dp"
-                android:layout_below="@id/item_planpie_layout"/>
+                android:layout_below="@id/item_planpie_layout"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+
+                        android:fontFamily="@font/nanum_barunpen_r"
+                        android:textSize="17dp"
+                        android:layout_margin="5dp"
+                        android:text="-왼손-"/>
+                    <TextView
+                        android:id="@+id/feed_left_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/nanum_barunpen_r"
+                        android:layout_margin="5dp"
+                        android:text="내용"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+
+                        android:fontFamily="@font/nanum_barunpen_r"
+                        android:textSize="17dp"
+                        android:layout_margin="5dp"
+                        android:text="-오른손-"/>
+                    <TextView
+                        android:id="@+id/feed_right_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/nanum_barunpen_r"
+                        android:layout_margin="5dp"
+                        android:text="내용"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--<TextView-->
+                <!--android:id="@+id/feed_textfield"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:minHeight="100dp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:fontFamily="@font/nanum_barunpen_r"-->
+                <!--android:textColor="#000000"-->
+                <!--android:text="손\n나는 비행기를 타고 싶다\n\n발\n자동차를 타고 싶다"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_below="@id/item_planpie_layout"/>-->
 
 
             <LinearLayout
@@ -85,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
                         android:fontFamily="@font/nanum_barunpen_r"
-                        android:text="싫어요"
+                        android:text="왼손"
                         android:layout_marginBottom="10dp"/>
 
                     <az.plainpie.PieView
@@ -113,7 +187,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
                         android:fontFamily="@font/nanum_barunpen_r"
-                        android:text="좋아요"
+                        android:text="오른손"
                         android:layout_marginBottom="10dp"/>
 
                     <az.plainpie.PieView
@@ -136,10 +210,10 @@
                 android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:layout_below="@id/feed_textfield">
+                android:layout_below="@id/text_field_layout">
 
                 <Button
-                    android:id="@+id/feed_true_button"
+                    android:id="@+id/feed_left_button"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -150,11 +224,11 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/selector_black_button"
-                    android:text="싫어요"
-                    android:layout_below="@id/feed_textfield"/>
+                    android:text="왼손"
+                    android:layout_below="@id/text_field_layout"/>
 
                 <Button
-                    android:id="@+id/feed_false_button"
+                    android:id="@+id/feed_right_button"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -164,8 +238,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/selector_black_button"
-                    android:text="좋아요"
-                    android:layout_below="@id/feed_textfield"/>
+                    android:text="오른손"
+                    android:layout_below="@id/text_field_layout"/>
 
             </LinearLayout>
 
